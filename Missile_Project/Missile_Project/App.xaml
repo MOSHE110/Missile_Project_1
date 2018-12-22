@@ -4,6 +4,19 @@
              xmlns:local="clr-namespace:Missile_Project"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="TextBoxStyle"  Color="LightBlue"  />
+        <SolidColorBrush x:Key="OpertorsColer" Color="#444444"/>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="LightBlue" />
+            <Setter Property="TextBlock.TextAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Century Gothic" />
+        </Style>
+       
+        
+
+
+
     </Application.Resources>
+   
 </Application>

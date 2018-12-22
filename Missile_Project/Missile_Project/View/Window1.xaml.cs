@@ -1,4 +1,4 @@
-﻿using Missile_Project.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,27 +11,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Missile_Project
+namespace Missile_Project.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Window1 : Window
     {
-        public MainWindow()
+        public Window1()
         {
             InitializeComponent();
+
             GetGeoCoordinate();
         }
         private async void GetGeoCoordinate()
         {
-           var Coordinate = await ViewModels.GeoCoordinateApi.GetGeoCoordinateAsync("IL_Jerusalem_Havad_haleumi");
-            double let = Coordinate.results[0].geometry.location.lat;
-            double lng = Coordinate.results[0].geometry.location.lng;
-            
+            var Coordinate = await ViewModels.GeoCoordinateApi.GetGeoCoordinateAsync("CA");
         }
     }
 }
