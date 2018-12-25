@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Missile_Project
+namespace Missile_Project.UserControls
 {
     /// <summary>
-    /// Interaction logic for UserContro.xaml
+    /// Interaction logic for DeshBord.xaml
     /// </summary>
-    public partial class UserContro : UserControl
+    public partial class DeshBord : UserControl
     {
-        public UserContro()
+        public DeshBord()
         {
             InitializeComponent();
         }

@@ -7,22 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="אישור" HorizontalAlignment="Left" Margin="120,355,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="175,90,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="175,150,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="175,200,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="173,244,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="168,33,0,0" TextWrapping="Wrap" Text="הכנסת נתוני נפילות" VerticalAlignment="Top" Height="26" Width="125"/>
-        <Label Content="שם" HorizontalAlignment="Left" Margin="40,90,0,0" VerticalAlignment="Top" Width="98"/>
-        <Label Content="כתובת" HorizontalAlignment="Left" Margin="40,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.526,0.577"/>
-        <Label Content="תאריך" HorizontalAlignment="Left" Margin="41,200,0,0" VerticalAlignment="Top"/>
-        <Label Content="מספר בומים" HorizontalAlignment="Left" Margin="40,244,0,0" VerticalAlignment="Top"/>
-        <WrapPanel HorizontalAlignment="Left" Height="396" Margin="10,19,0,0" VerticalAlignment="Top" Width="320"/>
-        <Image HorizontalAlignment="Left" Height="167" Margin="330,100,0,0" VerticalAlignment="Top" Width="180"/>
-        <Label Content="תמונת הנפילה" FontSize="20" HorizontalAlignment="Left" Margin="335,38,0,0" VerticalAlignment="Top" Height="57"/>
-        <Label Content="שעת נפילה מדוייקת" FontSize="20" HorizontalAlignment="Left" Margin="576,56,0,0" VerticalAlignment="Top" Height="57" RenderTransformOrigin="-0.082,1.351"/>
-        <Label Content="20:30:50" FontSize="50" HorizontalAlignment="Left" Margin="576,119,0,0" VerticalAlignment="Top" Height="148" Width="199"/>
-
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="35" MinWidth="100">
+            <Button  Style="{StaticResource navigtionBuutens}" Content="Page 1" Click="ButtonClikP1"/>
+            <Button Style="{StaticResource navigtionBuutens}" Content="Page 2"  Click="ButtonClikP2"/>
+            <Button Style="{StaticResource navigtionBuutens}" Content="Page 3"  />
+            <Button Style="{StaticResource navigtionBuutens}" Content="Page 4"  />
+            <Button Style="{StaticResource navigtionBuutens}" Content="Page 5"  />
+        </StackPanel>
+        <Frame Style="{StaticResource FrameStyle}" x:Name="Main"    >
+            
+        </Frame>
+      
 
     </Grid>
 </Window>
