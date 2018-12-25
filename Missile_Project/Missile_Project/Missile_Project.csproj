@@ -97,6 +97,9 @@
     <Compile Include="callerCenterPanel.xaml.cs">
       <DependentUpon>callerCenterPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Map.xaml.cs">
+      <DependentUpon>Map.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\GeoCoordinate.cs" />
     <Compile Include="UserControls\DeshBord.xaml.cs">
       <DependentUpon>DeshBord.xaml</DependentUpon>
@@ -122,6 +125,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Map.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\DeshBord.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

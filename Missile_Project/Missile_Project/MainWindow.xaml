@@ -6,18 +6,18 @@
         xmlns:local="clr-namespace:Missile_Project"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="35" MinWidth="100">
+    <Grid Margin="10,0,0.333,-0.333">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" ></RowDefinition>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"  Orientation="Horizontal" VerticalAlignment="Top" Height="35" MinWidth="100">
             <Button  Style="{StaticResource navigtionBuutens}" Content="Page 1" Click="ButtonClikP1"/>
             <Button Style="{StaticResource navigtionBuutens}" Content="Page 2"  Click="ButtonClikP2"/>
-            <Button Style="{StaticResource navigtionBuutens}" Content="Page 3"  />
+            <Button Style="{StaticResource navigtionBuutens}" Content="Page 3" Click="ButtonClikP3"  />
             <Button Style="{StaticResource navigtionBuutens}" Content="Page 4"  />
             <Button Style="{StaticResource navigtionBuutens}" Content="Page 5"  />
         </StackPanel>
-        <Frame Style="{StaticResource FrameStyle}" x:Name="Main"    >
-            
-        </Frame>
-      
-
+            <Frame  Grid.Row="1" Style="{StaticResource FrameStyle}" x:Name="Main"/>
     </Grid>
 </Window>

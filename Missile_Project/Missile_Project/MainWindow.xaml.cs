@@ -80,5 +80,10 @@ namespace Missile_Project
         {
             Main.Content = new AnalistPanel();
         }
+
+        private void ButtonClikP3(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Map();
+        }
     }
 }

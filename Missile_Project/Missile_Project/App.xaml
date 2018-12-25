@@ -6,10 +6,9 @@
     <Application.Resources>
 
         <SolidColorBrush x:Key="TextBoxStyle"  Color="Blue"  />
-        <SolidColorBrush x:Key="LebleStyle" Color="Red"/>
+        <SolidColorBrush x:Key="LebleStyle" Color="AliceBlue"/>
 
-        <Style TargetType="TextBox">
-            <Setter Property="Background" Value="{StaticResource TextBoxStyle}" />
+        <Style TargetType="Label">
             <Setter Property="TextBlock.TextAlignment" Value="Center" />
             <Setter Property="FontFamily" Value="Century Gothic" />
             <Setter Property="Margin" Value="5" />
@@ -22,6 +21,14 @@
             <Setter Property="Height" Value="35"/>
            
         </Style>
+       
+        <Style TargetType="TextBox">
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="MinWidth" Value="100"/>
+            <Setter Property="Margin" Value="10,0,0,0" />
+            <Setter Property="Height" Value="35"/>
+
+        </Style>
         <Style TargetType="UserControl" x:Key="UserControlStyle">
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
             <Setter Property="VerticalAlignment" Value="Stretch"/>
@@ -32,7 +39,7 @@
         </Style>
         <Style TargetType="Frame" x:Key="FrameStyle">
             <Setter Property="NavigationUIVisibility" Value="Hidden"/>
-            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalAlignment" Value ="Stretch" />
             <Setter Property="VerticalAlignment" Value="Stretch"/>
             <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
             <Setter Property="VerticalContentAlignment" Value="Stretch"/>
@@ -41,14 +48,17 @@
         </Style>
 
 
-        <Style TargetType="TextBox" x:Key="SpacificLabel" >
+        <Style TargetType="Label" x:Key="SpacificLabel" >
             <Setter Property="Background" Value="{StaticResource LebleStyle }"/>
         </Style>
-        <Style TargetType="TextBox" x:Key="SpacificLabel2" >
-            <Setter Property="Background" Value="Yellow"/>
+        <Style TargetType="Label" x:Key="SpacificLabel2" >
+            <Setter Property="Background" Value="{StaticResource LebleStyle }"/>
         </Style>
-        <Style TargetType="TextBox" x:Key="SpacificLabel3" >
-            <Setter Property="Background" Value="Orange"/>
+        <Style TargetType="Label" x:Key="SpacificLabel3" >
+            <Setter Property="Background" Value="{StaticResource LebleStyle }"/>
+        </Style>
+        <Style TargetType="Label" x:Key="SpacificLabel4" >
+            <Setter Property="Background" Value="{StaticResource LebleStyle }"/>
         </Style>
 
 
