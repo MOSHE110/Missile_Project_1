@@ -6,27 +6,29 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-  public class Report
+    public class Report
     {
-
-        DateTime Time { get; set; }
-        string Name   { get; set; }
-        string Report_Adress { get; set; }
-        int Boom_count { get; set; }
-        string image { get; set; }
-
-        //ctor
-        public Report(DateTime time, string name, string report_Adress, int boom_count)
+        public Report(int id, DateTime time, string name, string report_Adress, int boom_count, string imagePath, double lat, double log)
         {
+            this.id = id;
             Time = time;
             Name = name;
             Report_Adress = report_Adress;
             Boom_count = boom_count;
+            ImagePath = imagePath;
+            this.lat = lat;
+            this.log = log;
         }
 
-        public override string ToString()
-        {
-            return base.ToString();
-        }
+        int id { get; set; }
+        DateTime Time { get; set; }
+        string Name { get; set; }
+        string Report_Adress { get; set; }
+        int Boom_count { get; set; }
+        string ImagePath { get; set; }
+        double lat { get; set; }
+        double log { get; set; }
+
+
     }
 }

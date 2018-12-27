@@ -43,6 +43,7 @@ namespace Missile_Project
         }
 
         public static double[] GetLatLongFromImage(string imagePath)
+
         {
             ExifReader reader = new ExifReader(imagePath);
 
