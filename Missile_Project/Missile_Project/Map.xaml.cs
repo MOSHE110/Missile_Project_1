@@ -23,18 +23,20 @@ namespace Missile_Project
         public Map()
         {
             InitializeComponent();
+            WebBrowserGoogleMap.Navigate("https://www.google.com/maps?q=Shahal+Jerusalem+");
         }
 
         private void serch_data_click(object sender, RoutedEventArgs e)
         {
            
-                string street = txt_street.Text;
+            string street = txt_street.Text;
                 string city = txt_city.Text;
                 string  state= txt_state.Text;
                 string zip = txt_zip.Text;
             try
             {
                 StringBuilder quarryAddress = new StringBuilder();
+                
                 quarryAddress.Append("https://www.google.com/maps?q=");
                 //street
                 if (street!=string.Empty)

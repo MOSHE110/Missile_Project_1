@@ -84,6 +84,7 @@ namespace Missile_Project
         private void ButtonClikP3(object sender, RoutedEventArgs e)
         {
             Main.Content = new Map();
+
         }
     }
 }

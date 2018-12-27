@@ -21,7 +21,7 @@
         <Image HorizontalAlignment="Left" Height="167" Margin="330,100,0,0" VerticalAlignment="Top" Width="180"/>
         <Label Content="תמונת הנפילה" FontSize="20" HorizontalAlignment="Left" Margin="335,38,0,0" VerticalAlignment="Top" Height="57"/>
         <Label Content="שעת נפילה מדוייקת" FontSize="20" HorizontalAlignment="Left" Margin="576,56,0,0" VerticalAlignment="Top" Height="57" RenderTransformOrigin="-0.082,1.351"/>
-        <Label Content="20:30:50" FontSize="50" HorizontalAlignment="Left" Margin="576,119,0,0" VerticalAlignment="Top" Height="148" Width="199"/>
+        <Label Content="20:30:50" FontSize="50" HorizontalAlignment="Left" Margin="527,119,0,0" VerticalAlignment="Top" Height="148" Width="230"/>
 
 
     </Grid>
