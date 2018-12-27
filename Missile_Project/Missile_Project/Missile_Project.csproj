@@ -172,10 +172,7 @@
     <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\dcv.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\olympus-d320l.jpg" />
+    <Resource Include="images\exif2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
