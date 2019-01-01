@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="ExifLib, Version=1.7.0.0, Culture=neutral, PublicKeyToken=30284005913968db, processorArchitecture=MSIL">
       <HintPath>..\packages\ExifLib.1.7.0.0\lib\net45\ExifLib.dll</HintPath>
     </Reference>
@@ -68,6 +74,7 @@
     </Reference>
     <Reference Include="Syncfusion.Tools.Wpf, Version=16.4460.0.42, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
@@ -94,13 +101,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AnalistPanel.xaml.cs">
+    <Compile Include="Migrations\201901011120323_FirstMagration.cs" />
+    <Compile Include="Migrations\201901011120323_FirstMagration.Designer.cs">
+      <DependentUpon>201901011120323_FirstMagration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901011128160_Second-Migration.cs" />
+    <Compile Include="Migrations\201901011128160_Second-Migration.Designer.cs">
+      <DependentUpon>201901011128160_Second-Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="UserControls\AnalistPanel.xaml.cs">
       <DependentUpon>AnalistPanel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="callerCenterPanel.xaml.cs">
+    <Compile Include="UserControls\callerCenterPanel.xaml.cs">
       <DependentUpon>callerCenterPanel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Map.xaml.cs">
+    <Compile Include="UserControls\Map.xaml.cs">
       <DependentUpon>Map.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\GeoCoordinate.cs" />
@@ -108,11 +124,11 @@
       <DependentUpon>DeshBord.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\GeoCoordinateApi.cs" />
-    <Page Include="AnalistPanel.xaml">
+    <Page Include="UserControls\AnalistPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="callerCenterPanel.xaml">
+    <Page Include="UserControls\callerCenterPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -128,7 +144,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Map.xaml">
+    <Page Include="UserControls\Map.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -151,10 +167,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\201901011120323_FirstMagration.resx">
+      <DependentUpon>201901011120323_FirstMagration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901011128160_Second-Migration.resx">
+      <DependentUpon>201901011128160_Second-Migration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Api_packages\packages.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -162,10 +185,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="GoogleMaps.LocationServices.readme.txt" />
+    <Resource Include="Api_packages\GoogleMaps.LocationServices.readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />
@@ -173,6 +198,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\exif2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{09d5905d-2a61-4b6d-8165-bc2d7d770ddf}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

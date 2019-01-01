@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+
+//using System.Data.Entity;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 using BE;
+using static Missile_Project.MainWindow;
 
 namespace DAL
 {
     class Dal_imp : Idal
     {
-        public void AddDrop(Drop Drop)
+        public bool AddDrop(Drop Drop)
         {
             throw new NotImplementedException();
         }
@@ -59,4 +62,5 @@ namespace DAL
             throw new NotImplementedException();
         }
     }
+    
 }

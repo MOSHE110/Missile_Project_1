@@ -14,7 +14,7 @@ namespace DAL
         void RemoveReport(int id);
         void UpdateReport(Report Report);
 
-        void AddDrop(Drop Drop);
+        bool AddDrop(Drop Drop);
         void RemoveDrop(int id);
         void UpdateDrop(Drop Drop);
 
